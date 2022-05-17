@@ -29,6 +29,15 @@ app.get('/', (req,res) =>{
     res.render('index')
 })
 
+app.get('/trainees', (req, res) =>{
+    let sql = "SELECT * FROM canteen.trainees"
+    let query = connection.query(sql, (err, rows) =>{
+        if (err) console.log('connection unsuccessful');
+        else console.log('trainee query ran')
+        res.render('trainee')
+    })
+})
+
 
 //port listening
 app.listen(port, ()=> { console.log(`Listening on port ${port}`)})
