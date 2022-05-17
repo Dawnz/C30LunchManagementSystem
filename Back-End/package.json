@@ -2,8 +2,9 @@
   "name": "c30lunchmanagementsystem",
   "version": "1.0.0",
   "description": "tesdj",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "devStart": "nodemon Back-End/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -1,7 +1,7 @@
+const port = 5000
 const bodyParser = require('body-parser')
 const express = require('express')
-const flash = require('express-flash')
-const session = require('express-session')
+const path = require('path')
 const mysql = require('mysql')
 
 const app = express()
@@ -18,3 +18,17 @@ connection.connect(function(error){
     if (!error) console.log('Canteen Database Connected')
     else console.log(error)
 })
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs')
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }))
+
+
+app.get('/', (req,res) =>{
+    res.render('index')
+})
+
+
+//port listening
+app.listen(port, ()=> { console.log(`Listening on port ${port}`)})
