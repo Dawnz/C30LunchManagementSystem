@@ -35,7 +35,9 @@ app.get('/trainees', (req, res) =>{
     let query = connection.query(sql, (err, rows) =>{
         if (err) console.log('connection unsuccessful');
         else console.log('trainee query ran')
-        res.render('trainee')
+        res.render('trainee', {
+            trainees: rows
+        })
     })
 })
 
@@ -78,7 +80,7 @@ app.get('/delete/:userId',(req,res)=> {
     let query = connection.query(sql, (err, result) =>{
         if (err) throw err
         //redirect to wherever enuh dawgs. idk how the front set up
-       res.redirect('/')
+       res.redirect('/trainees')
     })
 })
 
