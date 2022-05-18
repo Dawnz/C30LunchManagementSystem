@@ -14,4 +14,4 @@ connection.connect(function(error){
     else console.log(error)
 })
 
-modules.export = connection
+module.exports = connection

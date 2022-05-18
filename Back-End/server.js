@@ -1,31 +1,40 @@
+const express = require('express');
 const port = 5000
-const bodyParser = require('body-parser')
-
-const path = require('path')
-const app = express()
+const bodyParser = require('body-parser');
+const db = require('./database/db')
+const path = require('path');
+const app = express();
+const expressLayouts = require('express-ejs-layouts');
 
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs');
+
+app.set('layout', 'layouts/layout')
+app.use(expressLayouts)
+app.use(express.static('public'))
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
+const traineesRoute = require('./routes/trainees');
+
+const menuRoute = require('./routes/menu')
+
+const orders = require('./routes/orders')
+
+const meals = require('./routes/orders')
+
+app.use('/', traineesRoute);
+app.use('/', menuRoute);
+app.use('/meal-orders', orders);
+app.use('/meals', meals)
 
 app.get('/', (req,res) =>{
-    res.render('index')
+    res.render('home-template')
 })
 
 
-//menu display route
-app.get('/menu', (req, res) =>{
-    let sql = "SELECT * FROM canteen.meal_options"
-    let query = connection.query(sql, (err, rows) =>{
-        if (err) console.log('connection unsuccessful');
-        else console.log('menu query ran')
-        res.render('menu', {
-            menu: rows
-        })
-    })
-})
+
 // created login for user
 app.get('/login', (req, res)=>{
     let f_name = req.body.f_name;

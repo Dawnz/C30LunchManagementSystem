@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router();
+const connection = require('../database/db')
 
 //trainee display route
 router.get('/trainees', (req, res) =>{
@@ -55,3 +56,5 @@ router.get('/delete/:userId',(req,res)=> {
        res.redirect('/trainees')
     })
 })
+
+module.exports = router
