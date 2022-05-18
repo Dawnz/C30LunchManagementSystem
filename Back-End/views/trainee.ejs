@@ -1,1 +1,36 @@
 <h1>Trainee route works</h1>
+<table border="1">
+    <tr>
+        <th>Student Id</th>
+        <th>Cohort</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Date Joined</th>
+        <th>Mode of Action</th>
+    </tr>
+    <%  trainees.forEach( (trainee) => { %>
+        <tr>
+            <td>
+                <%= trainee.id %>
+            </td>
+            <td>
+                <%= trainee.cohort %>
+            </td>
+            <td>
+                <%= trainee.f_name %>
+            </td>
+        </td>
+        <td>
+            <%= trainee.l_name %>
+        </td>
+    </td>
+    <td>
+        <%= trainee.date_joined %>
+    </td>
+            <td>
+                <a href="edit/<%= trainee.id %>"><button>edit</button></a>
+                <a href="delete/<%= trainee.id %>"><button>remove</button></a>
+            </td>
+        </tr>
+        <% }) %>
+</table>
