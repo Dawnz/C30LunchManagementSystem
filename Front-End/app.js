@@ -23,6 +23,8 @@ app.use(express.static('public'))
 // Routes import
 const home = require('./routes/home');
 const admin = require('./routes/admin');
+const menu = require('./routes/menu');
 
 app.use('/home', home);
 app.use('/admin', admin);
+app.use('/menu', menu);

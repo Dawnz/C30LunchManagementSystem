@@ -1,9 +1,9 @@
-<section class="mt-1">
+<section>
     <ul class="flex border-b">
         <li class="-mb-px mr-1">
-          <a class="bg-white inline-block border-1 border-t border-r rounded-t py-2 px-4 text-black-700 font-semibold" href="#">Trainees</a>
+          <a class="bg-white uppercase inline-block border-1 border-t border-r rounded-t py-2 px-4 text-black-700 font-semibold" href="#" >Admin Profile</a>
         </li>
-        <li class="mr-1">
+        <!-- <li class="mr-1">
           <a class="bg-white inline-block py-2 px-4 text-black-500 hover:text-black-800 font-semibold" href="#">Meal Update</a>
         </li>
         <li class="mr-1">
@@ -11,33 +11,116 @@
         </li>
         <li class="mr-1">
           <a class="bg-white inline-block py-2 px-4 text-black-500 hover:text-black-800 font-semibold" href="#">Tab</a>
-        </li>
+        </li> -->
       </ul>
 </section>
 
 <section class="menu ml-4 mt-6">
   <h4 class="uppercase font-bold">Trainees</h4>
-  <div class="flex  space-x-4 flex-row ... ">
-    <div><p>Cohort</p>
-    </div>
-    <div><p>First Name</p>
-    </div>
-    <div><p>last Name</p>
-    </div>
-    <div><p>Date Joined</p>
-    </div>
-  </div>
+
+
+  <table class="text-sm text-left text-gray-500 dark:text-gray-400">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <tr>
+            <th scope="col" class="px-6 py-3">
+                First Name
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Last Name
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Date Registered
+            </th>
+
+            <th scope="col" class="px-6 py-3">
+              Update
+          </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <td scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                Rajeime
+            </td>
+            <td class="px-6 py-4">
+                Roberts
+            </td>
+            <td class="px-6 py-4">
+                ...........
+            </td>
+      
+            <td class="px-6 py-4">
+                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+            </td>
+        </tr>
+
+        
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <td scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+              Rajeime
+          </td>
+          <td class="px-6 py-4">
+              Roberts
+          </td>
+          <td class="px-6 py-4">
+              ...........
+          </td>
+    
+          <td class="px-6 py-4">
+              <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+          </td>
+      </tr>
+        
+    </tbody>
+</table>
 
 </section>
 
-<section class="meal-options">
+<!-- orders -->
+<section class="orders menu ml-4 mt-6">
+  <h4 class="uppercase font-bold">Orders</h4>
+    <table class="text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+              <th scope="col" class="px-6 py-3">
+                  First Name
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Last Name
+              </th>
   
-  <div class="flex  space-x-4 flex-row ..." >
-      <select name="" id="">
-        <option value="">option1</option>
-        <option value="">option2</option>
-      </select>
+              <th scope="col" class="px-6 py-3">
+                Order
+            </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <td scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                  Rajeime
+              </td>
+              <td class="px-6 py-4">
+                  Roberts
+              </td>
+              <td class="px-6 py-4">
+                  ...........
+              </td>
+          </tr>
 
-  </div>
+          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <td scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                Rajeime
+            </td>
+            <td class="px-6 py-4">
+                Roberts
+            </td>
+            <td class="px-6 py-4">
+                ...........
+            </td>
+      
+           
+        </tr>
 
+        
+  </table>
 </section>
