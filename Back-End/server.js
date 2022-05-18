@@ -71,6 +71,28 @@ app.get('/edit/:userId',(req,res)=> {
     })
 })
 
+//delete route
+app.get('/delete/:userId',(req,res)=> {
+    const userId = req.params.userId
+    let sql = `DELETE FROM canteen.trainees WHERE id = ${userId}`
+    let query = connection.query(sql, (err, result) =>{
+        if (err) throw err
+        //redirect to wherever enuh dawgs. idk how the front set up
+       res.redirect('/')
+    })
+})
+
+//menu display route
+app.get('/menu', (req, res) =>{
+    let sql = "SELECT * FROM canteen.meal_options"
+    let query = connection.query(sql, (err, rows) =>{
+        if (err) console.log('connection unsuccessful');
+        else console.log('menu query ran')
+        res.render('menu', {
+            menu: rows
+        })
+    })
+})
 
 //port listening
 app.listen(port, ()=> { console.log(`Listening on port ${port}`)})
