@@ -25,3 +25,7 @@ const home = require('./routes/home')
 const register = require('./routes/register')
 
 app.use('/register', register)
+const meals = require('./routes/meals')
+
+app.use('/home', home)
+app.use('/meals', meals)
