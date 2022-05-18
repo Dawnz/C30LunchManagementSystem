@@ -19,3 +19,13 @@ app.set('views', __dirname + '/views')
 app.set('layout', 'layouts/layout')
 app.use(expressLayouts)
 app.use(express.static('public'))
+
+// Routes import
+const home = require('./routes/home')
+const register = require('./routes/register')
+
+app.use('/register', register)
+const meals = require('./routes/meals')
+
+app.use('/home', home)
+app.use('/meals', meals)
