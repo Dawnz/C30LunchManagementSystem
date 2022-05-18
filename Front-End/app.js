@@ -22,5 +22,7 @@ app.use(express.static('public'))
 
 // Routes import
 const home = require('./routes/home')
+const meals = require('./routes/meals')
 
 app.use('/home', home)
+app.use('/meals', meals)
