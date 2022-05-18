@@ -21,6 +21,8 @@ app.use(expressLayouts)
 app.use(express.static('public'))
 
 // Routes import
-const home = require('./routes/home')
+const home = require('./routes/home');
+const admin = require('./routes/admin');
 
-app.use('/home', home)
+app.use('/home', home);
+app.use('/admin', admin);
