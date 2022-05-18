@@ -22,5 +22,6 @@ app.use(express.static('public'))
 
 // Routes import
 const home = require('./routes/home')
+const register = require('./routes/register')
 
-app.use('/home', home)
+app.use('/register', register)
