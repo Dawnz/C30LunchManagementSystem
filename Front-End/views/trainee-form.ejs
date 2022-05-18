@@ -1,49 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>trainee</title>
-</head>
-<body>
+<section class="w-1/2 m-auto flex items-center h-[80vh] justify-center">
+    <form action="" class="border shadow-md p-4">
+        <h2 class="text-2xl py-3 text-center">Trainee Registration</h2>
 
-    <form>
-            <h2>Trainee</h2>
+        <div class="text-center text-5xl py-4 mb-5">
+            <i class="fa-solid fa-user"></i>
+        </div>
             
-            <label for="fname">First Name:</label>
-            <br/>
-            <input type="text" name="fname"  placeholder="Enter your First Name"/>
-            <br/>
-            <label for="lname">Last Name:</label>
-            <br/>
-            <input type="text" name="lname"  placeholder="Enter your Last Name"/>
-            <br/>
-            <!-- <label for="email">Email:</label>
-            <br/>
-            <input type="email" name="email" placeholder="Enter your Email"/> -->
-            <br/>
-            <br/>
-            <label for="cohort_number">cohort_number:</label>
-            <input type="cohort_number" name="cohort_number" placeholder=""/>
-
-            <!-- <br/>
-            <h2> Please Select your Subjects:</h2>
-            <input type="checkbox" id="subject1" name="subject1" value="cohort1 ">
-            <label for="subject1">Groovy</label>
-            <input type="checkbox" id="subject2" name="subject2" value="cohort2">
-            <label for="subject2">Java</label>
-            <input type="checkbox" id="subject3" name="subject3" value="SQL">
-            <label for="subject3">SQL</label>
-            <input type="checkbox" id="subject4" name="subject4" value="JavaScript">
-            <label for="subject3">JavaScript</label>
-            <br/>
-            <br/> -->
-            <label for="date_joined">date joined:</label>
-            <br/>
-            <input type="text" name="lname"  placeholder=""/>
-            <br/>
-        
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex flex-col">
+                    <label for="fname">First Name:</label>
+                    <input type="text" name="fname" class="border p-2 outline-none" placeholder="Enter your First Name"/>
+                </div>
+                
+                <div class="flex flex-col">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" name="lname" class="border p-2 outline-none" placeholder="Enter your Last Name"/>
+                </div>
+               
+                <div class="flex flex-col">
+                    <label for="cohort_number">Cohort Number:</label>
+                    <!-- <input type="cohort_number" name="cohort_number"class="border p-2 outline-none" placeholder=""/> -->
+                    <select name="cohort_number" id="" class="border p-2 outline-none">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                    </select>
+                </div>
     
-</body>
-</html>
+               <div class="flex flex-col">
+                   <% let d = new Date().toJSON().slice(0, 10).split('-').reverse().join('-') %> 
+                   <% console.log(d) %> 
+                    <label for="date_joined">Date Joined:</label>
+                    <input type="text" name="date_joined" class="border p-2 outline-none" placeholder="" value="<%= d %> " readonly/>
+               </div>
+            </div>
+            
+            <div class="p-5 text-center">
+                <input type="submit" value="Register" id="" class="p-3 bg-blue-500 text-white">
+            </div>
+    </form>
+</section>
