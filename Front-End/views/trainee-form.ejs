@@ -19,7 +19,6 @@
                
                 <div class="flex flex-col">
                     <label for="cohort_number">Cohort Number:</label>
-                    <!-- <input type="cohort_number" name="cohort_number"class="border p-2 outline-none" placeholder=""/> -->
                     <select name="cohort_number" id="" class="border p-2 outline-none">
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -28,7 +27,6 @@
     
                <div class="flex flex-col">
                    <% let d = new Date().toJSON().slice(0, 10).split('-').reverse().join('-') %> 
-                   <% console.log(d) %> 
                     <label for="date_joined">Date Joined:</label>
                     <input type="text" name="date_joined" class="border p-2 outline-none" placeholder="" value="<%= d %> " readonly/>
                </div>
