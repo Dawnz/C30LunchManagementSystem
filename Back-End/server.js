@@ -22,6 +22,7 @@ const orders = require('./routes/orders');
 const meals = require('./routes/meals');
 const register = require('./routes/register');
 const ordersTable = require('./routes/order_table')
+const orderSummary = require('./routes/orderSummary')
 
 app.use('/', traineesRoute);
 app.use('/', menuRoute);
@@ -29,6 +30,7 @@ app.use('/', orders);
 app.use('/meals', meals);
 app.use('/register', register);
 app.use('/', ordersTable)
+app.use('/ordersummary', orderSummary)
 
 app.get('/', (req,res) =>{
     res.render('home-template')
