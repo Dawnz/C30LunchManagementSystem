@@ -3,11 +3,14 @@ const router = express.Router();
 const connection = require('../database/db')
 
 router.get('/orderstable', (req, res) =>{
-    let sql = "SELECT * FROM canteen.trainee_options"
+    // let sql = "SELECT * FROM canteen.trainee_options";
+   let sql = "SELECT mc.category_name,mo.option_name FROM canteen.meal_categories mc, meal_options mo where mc.id = mo.meal_category_id"
     let query = connection.query(sql, (err, rows) =>{
         if (err) console.log('connection unsuccessful');
-        else console.log('orders table query ran')
-        res.render('order_table')
+        
+        else console.table(rows);
+        res.render('order_table',{data:rows})
+       
     })
 })
 

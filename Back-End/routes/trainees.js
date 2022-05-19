@@ -11,6 +11,7 @@ router.get('/trainees', (req, res) =>{
         res.render('trainee', {
             trainees: rows
         })
+        
     })
 })
 
