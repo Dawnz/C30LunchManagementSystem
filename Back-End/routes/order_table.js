@@ -18,9 +18,13 @@ router.post('/addOrder', (req, res)=>{
         l_name: req.body.lastName,
         date_joined: req.body.dateJoined
     }
+
     let sql = "INSERT INTO canteen.trainees SET ?"
     let query = connection.query(sql, data, (err, results) =>{
         if(err) throw err
-    res.redirect('/orderstable')
+    res.redirect('/orderstable');
 })
+})
+
+
 module.exports = router
