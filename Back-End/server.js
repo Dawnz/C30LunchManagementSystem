@@ -17,22 +17,22 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
 const traineesRoute = require('./routes/trainees');
-
-const menuRoute = require('./routes/menu')
-
-const orders = require('./routes/orders')
-
-const meals = require('./routes/orders')
+const menuRoute = require('./routes/menu');
+const orders = require('./routes/orders');
+const meals = require('./routes/meals');
+const register = require('./routes/register');
+const ordersTable = require('./routes/order_table')
 
 app.use('/', traineesRoute);
 app.use('/', menuRoute);
-app.use('/meal-orders', orders);
-app.use('/meals', meals)
+app.use('/', orders);
+app.use('/meals', meals);
+app.use('/register', register);
+app.use('/', ordersTable)
 
 app.get('/', (req,res) =>{
     res.render('home-template')
 })
-
 
 
 // created login for user
@@ -64,6 +64,7 @@ app.get('/order/:userId',(req, res)=>{
         })
     })
 })
+
 //this is called when an order is placed
 app.post('/addOrderItem',(req, res)=>{
     let trainee_id=req.body.trainee_id;

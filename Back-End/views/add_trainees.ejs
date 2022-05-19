@@ -8,18 +8,18 @@
             
             <div class="grid grid-cols-2 gap-4">
                 <div class="flex flex-col">
-                    <label for="fname">First Name:</label>
-                    <input type="text" name="fname" class="border p-2 outline-none" placeholder="Enter your First Name"/>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" name="firstName" class="border p-2 outline-none" placeholder="Enter your First Name"/>
                 </div>
                 
                 <div class="flex flex-col">
-                    <label for="lname">Last Name:</label>
-                    <input type="text" name="lname" class="border p-2 outline-none" placeholder="Enter your Last Name"/>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" name="lastName" class="border p-2 outline-none" placeholder="Enter your Last Name"/>
                 </div>
                
                 <div class="flex flex-col">
-                    <label for="cohort_number">Cohort Number:</label>
-                    <select name="cohort_number" id="" class="border p-2 outline-none">
+                    <label for="cohort">Cohort Number:</label>
+                    <select name="cohort" id="" class="border p-2 outline-none">
                         <option value="1">One</option>
                         <option value="2">Two</option>
                     </select>
@@ -27,8 +27,8 @@
     
                <div class="flex flex-col">
                    <% let d = new Date().toJSON().slice(0, 10).split('-').reverse().join('-') %> 
-                    <label for="date_joined">Date Joined:</label>
-                    <input type="text" name="date_joined" class="border p-2 outline-none" placeholder="" value="<%= d %> " readonly/>
+                    <label for="dateJoined">Date Joined:</label>
+                    <input type="text" name="dateJoined" class="border p-2 outline-none" placeholder="" value="<%= d %> " readonly/>
                </div>
             </div>
             
