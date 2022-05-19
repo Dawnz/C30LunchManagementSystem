@@ -1,1 +1,38 @@
-<h1>Trainee route works</h1>
+<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <tr tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th scope="col" class="px-6 py-3">Student Id</th>
+        <th scope="col" class="px-6 py-3">Cohort</th>
+        <th scope="col" class="px-6 py-3">First Name</th>
+        <th scope="col" class="px-6 py-3">Last Name</th>
+        <th scope="col" class="px-6 py-3">Date Joined</th>
+        <th scope="col" class="px-6 py-3">Mode of Action</th>
+    </tr>
+    </thead>
+
+    <%  trainees.forEach( (trainee) => { %>
+        <tr tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4">
+                <%= trainee.id %>
+            </td>
+            <td class="px-6 py-4">
+                <%= trainee.cohort %>
+            </td>
+            <td class="px-6 py-4">
+                <%= trainee.f_name %>
+            </td>
+        </td>
+        <td class="px-6 py-4">
+            <%= trainee.l_name %>
+        </td>
+    </td>
+    <td class="px-6 py-4">
+        <%= trainee.date_joined %>
+    </td>
+            <td class="px-6 py-4">
+                <button><a href="edit/<%= trainee.id %>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">edit</button></a>
+                <a href="delete/<%= trainee.id %>" class="font-medium text-red-600 dark:text-red-500 hover:underline"><button>remove</button></a>
+            </td>
+        </tr>
+        <% }) %>
+</table>

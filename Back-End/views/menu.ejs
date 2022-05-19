@@ -1,0 +1,25 @@
+<h1>menu works</h1>
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>Meal Category</th>
+        <th>Option Name</th>
+    </tr>
+    <%  menu.forEach( (item) => { %>
+        <tr>
+            <td>
+                <%= item.id %>
+            </td>
+            <td>
+                <%= item.meal_category_id %>
+            </td>
+            <td>
+                <%= item.option_name %>
+            </td>
+            <td>
+                <a href="edit/<%= item.id %>"><button>edit</button></a>
+                <a href="delete/<%= item.id %>"><button>remove</button></a>
+            </td>
+        </tr>
+        <% }) %>
+</table>

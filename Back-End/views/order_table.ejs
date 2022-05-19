@@ -1,0 +1,19 @@
+<h1>Orders Table works</h1>
+
+<table>
+    <tr>
+        <th>Category Name</th>
+        <th>Option Name</th>
+    </tr>
+
+    <%  data.forEach( (item) => { %>
+        <tr tr>
+            <td class="px-6 py-4">
+                <%= item.category_name %>
+            </td>
+            <td class="px-6 py-4">
+                <%= item.option_name %>
+            </td>
+        </tr>
+        <% }) %>
+</table>
